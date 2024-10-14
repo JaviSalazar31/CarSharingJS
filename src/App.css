@@ -20,19 +20,19 @@ body {
 
 /* Logo */
 .logo img {
-  height: 100px;
-  width: auto;
+  width: 200px; /* Puedes ajustar este valor según prefieras */
+  height: auto;  /* Mantén la proporción */
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .logo img {
-    height: 60px;
+    width: 250px; /* Ajusta el tamaño en pantallas más grandes */
   }
 }
 
 @media (max-width: 480px) {
   .logo img {
-    height: 50px;
+    width: 150px; /* Reduce el tamaño en pantallas móviles */
   }
 }
 
@@ -76,28 +76,28 @@ body {
 
 /* Carrito de compras */
 .cart-widget {
-  font-size: 1.5rem;
-  color: #1eff00;
-  margin-right: 30px;
+  font-size: 24px;
+  color: #ffcc00;
+  margin-right: 30px; /* Aumentar el margen para darle más espacio */
   cursor: pointer;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, margin-right 0.3s ease; /* Animación suave */
 }
 
-.cart-widget i:hover {
-  transform: scale(1.2);
+.cart-widget:hover {
+  transform: scale(1.1); /* Agranda ligeramente el ícono al pasar el cursor */
 }
 
 @media (max-width: 768px) {
-  .cart-widget i {
-    font-size: 22px;
+  .cart-widget {
+    font-size: 22px; /* Tamaño más pequeño para tabletas */
+    margin-right: 15px; /* Menor margen en pantallas más pequeñas */
   }
 }
 
 @media (max-width: 480px) {
-  .cart-widget i {
+  .cart-widget {
     font-size: 20px;
-    margin-right: 10px;
+    margin-right: 10px; /* Menor margen en teléfonos */
   }
 }
 

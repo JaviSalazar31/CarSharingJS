@@ -1,5 +1,5 @@
 import React from 'react';
-import '/src/Button.css'; // Puedes definir estilos personalizados en un archivo CSS
+import '/src/Button.css'; // Archivo de estilos para botones
 
 const Button = ({ text, onClick, className }) => {
   return (
@@ -10,3 +10,4 @@ const Button = ({ text, onClick, className }) => {
 };
 
 export default Button;
+

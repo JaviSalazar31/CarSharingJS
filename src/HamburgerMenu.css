@@ -1,0 +1,53 @@
+/* Ajustes generales del menú hamburguesa */
+.hamburger-menu {
+  position: relative;
+}
+
+.hamburger-icon {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Menú desplegable */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: #333;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 200px;
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.nav-links.open {
+  display: flex;
+}
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 768px) {
+  .hamburger-icon {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    padding: 0;
+    margin-right: 20px;
+  }
+
+  .custom-button {
+    margin: 0 10px;
+  }
+}
+
+
