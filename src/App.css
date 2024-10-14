@@ -44,8 +44,25 @@
     padding: 10px;
   }
 
-  .nav-links {
-    margin-top: 10px;
+  .nav-link {
+    margin-right: 10px; /* Aumenta el espacio entre los botones */
+  }
+  
+  @media (max-width: 480px) {
+    .nav-link {
+      margin-right: 5px; /* Reduce el margen en pantallas más pequeñas */
+    }
+  }
+  .nav-link {
+    padding: 10px 15px; /* Tamaño del botón */
+    font-size: 16px; /* Tamaño de texto base */
+  }
+  
+  @media (max-width: 480px) {
+    .nav-link {
+      padding: 8px 10px; /* Reducir tamaño del botón en pantallas móviles */
+      font-size: 14px; /* Tamaño de texto más pequeño */
+    }
   }
 
   .item-list-container {
@@ -53,7 +70,40 @@
   }
 
   .logo img {
-    height: 50px;
+    height: 80px; /* Tamaño para pantallas normales */
+    width: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .logo img {
+      height: 60px; /* Reducir el tamaño en pantallas de tabletas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo img {
+      height: 50px; /* Tamaño más pequeño para teléfonos */
+    }
+  }
+  .cart-widget i {
+    font-size: 24px; /* Tamaño base */
+    color: #ffcc00;
+  }
+  
+  @media (max-width: 768px) {
+    .cart-widget i {
+      font-size: 22px; /* Un poco más pequeño en tabletas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cart-widget i {
+      font-size: 20px; /* Tamaño más pequeño para teléfonos */
+    }
+  
+    .cart-widget {
+      margin-right: 10px; /* Ajuste el margen en teléfonos */
+    }
   }
 }
 /* src/App.css */
