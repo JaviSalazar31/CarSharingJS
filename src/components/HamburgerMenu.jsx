@@ -12,7 +12,7 @@ const HamburgerMenu = () => {
   return (
     <div className="hamburger-menu">
       <button className="hamburger-icon" onClick={toggleMenu}>
-        &#9776;
+        &#9776; <span className="menu-text">Menú</span> {/* Agregamos el texto "Menú" */}
       </button>
       <nav className={`nav-links ${isOpen ? 'open' : ''}`}>
         <Button text="Inicio" className="nav-link" onClick={() => window.location.href = "#home"} />
@@ -25,5 +25,6 @@ const HamburgerMenu = () => {
 };
 
 export default HamburgerMenu;
+
 
 

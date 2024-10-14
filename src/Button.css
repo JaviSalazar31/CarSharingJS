@@ -1,5 +1,5 @@
 .custom-button {
-  background-color: #007bff; /* Color azul de fondo */
+  background-color: #007bff;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -8,17 +8,27 @@
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.3s ease-in-out;
+  width: 100%; /* Asegura que el botón ocupe todo el ancho disponible en pantallas pequeñas */
+  max-width: 250px; /* Limita el ancho máximo del botón en pantallas más grandes */
+  text-align: center; /* Asegura que el texto esté centrado */
 }
 
+/* Efecto hover */
 .custom-button:hover {
-  background-color: #0056b3; /* Color más oscuro al hacer hover */
-  transform: scale(1.1); /* Agranda el botón ligeramente */
+  background-color: #0056b3;
+  transform: scale(1.1); /* Agranda ligeramente el botón al pasar el cursor */
 }
 
-/* Estilo específico para el botón del carrito */
-.cart-link i {
-  font-size: 24px;
-  color: #ffcc00; /* Color dorado del carrito */
+/* Responsivo: Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .custom-button {
+    font-size: 1rem; /* Reduce ligeramente el tamaño de la fuente para pantallas pequeñas */
+    padding: 8px 15px; /* Ajusta el padding para pantallas pequeñas */
+    width: 90%; /* Ocupa el 90% del ancho en pantallas móviles */
+    max-width: none; /* Elimina la restricción de ancho máximo en pantallas pequeñas */
+    margin: 10px 0; /* Agrega más espacio entre los botones */
+  }
 }
+
 
   
