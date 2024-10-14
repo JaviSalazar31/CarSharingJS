@@ -1,23 +1,42 @@
-/* src/App.css */
+/* Estilos generales */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #b9bcc0;
+  color: #333;
+}
 
-/* Estilos para la barra de navegación */
+/* Barra de navegación */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  padding: 10px 20px;
+  background: linear-gradient(90deg, #333, #555);
+  padding: 15px 30px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
 
+/* Logo */
 .logo img {
-  height: 100px; /* Aumenta el tamaño del logo */
-  width: auto;   /* Mantiene la proporción del logo */
+  height: 100px;
+  width: auto;
 }
 
+@media (max-width: 768px) {
+  .logo img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 50px;
+  }
+}
+
+/* Enlaces de navegación */
 .nav-links {
   display: flex;
   list-style: none;
@@ -27,160 +46,64 @@
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 1rem;
-}
-
-.cart-widget {
-  font-size: 1.5rem;
-  color: white; /* Asegúrate de que sea visible */
-  margin-right: 40px; /* Ajusta la posición si es necesario */
-  cursor: pointer;
-}
-
-/* Ajustes para dispositivos móviles */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .nav-link {
-    margin-right: 10px; /* Aumenta el espacio entre los botones */
-  }
-  
-  @media (max-width: 480px) {
-    .nav-link {
-      margin-right: 5px; /* Reduce el margen en pantallas más pequeñas */
-    }
-  }
-  .nav-link {
-    padding: 10px 15px; /* Tamaño del botón */
-    font-size: 16px; /* Tamaño de texto base */
-  }
-  
-  @media (max-width: 480px) {
-    .nav-link {
-      padding: 8px 10px; /* Reducir tamaño del botón en pantallas móviles */
-      font-size: 14px; /* Tamaño de texto más pequeño */
-    }
-  }
-
-  .item-list-container {
-    padding: 30px;
-  }
-
-  .logo img {
-    height: 80px; /* Tamaño para pantallas normales */
-    width: auto;
-  }
-  
-  @media (max-width: 768px) {
-    .logo img {
-      height: 60px; /* Reducir el tamaño en pantallas de tabletas */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .logo img {
-      height: 50px; /* Tamaño más pequeño para teléfonos */
-    }
-  }
-  .cart-widget i {
-    font-size: 24px; /* Tamaño base */
-    color: #ffcc00;
-  }
-  
-  @media (max-width: 768px) {
-    .cart-widget i {
-      font-size: 22px; /* Un poco más pequeño en tabletas */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .cart-widget i {
-      font-size: 20px; /* Tamaño más pequeño para teléfonos */
-    }
-  
-    .cart-widget {
-      margin-right: 10px; /* Ajuste el margen en teléfonos */
-    }
-  }
-}
-/* src/App.css */
-
-/* Estilos para el contenedor de la lista de productos */
-.item-list-container {
-  margin-top: 100px; /* Para compensar la altura de la barra de navegación fija */
-  padding: 40px 20px;
-  text-align: center;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Ajustes de tipografía y tamaño */
-.item-list-container h2 {
-  font-size: 2rem;
-  color: #333;
-}
-
-.item-list-container {
-  margin-top: 120px; /* Ajusta para mayor separación del navbar */
-  padding: 50px 30px; /* Añade más espacio interior */
-  text-align: center;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #b9bcc0; /* Fondo claro */
-  color: #333; /* Color de texto más suave */
-}
-
-
-.navbar {
-  background: linear-gradient(90deg, #333, #555);
-  padding: 15px 30px;
-}
-
-.navbar a {
-  color: #fff;
   font-size: 1.1rem;
-  padding: 0 15px;
-}
-
-.logo img {
-  height: 100px; /* Aumenta el tamaño del logo */
-  width: auto;   /* Mantiene la proporción del logo */
-}
-.nav-links a:hover {
-  color: #00ccff; /* Azul claro en lugar de amarillo */
+  padding: 0 20px;
   transition: color 0.3s ease-in-out;
 }
 
-.nav-links a {
-  padding: 0 20px; /* Aumenta el espacio entre los enlaces */
-  font-size: 1.1rem; /* Tamaño de fuente ligeramente mayor */
+.nav-links a:hover {
+  color: #00ccff;
 }
 
-.cart-widget i {
-  color: #1eff00; /* Color brillante para hacer destacar el carrito */
-  transition: transform 0.3s ease;
+.nav-link {
+  background: none;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #ffcc00;
+}
+
+@media (max-width: 480px) {
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
+
+/* Carrito de compras */
+.cart-widget {
+  font-size: 1.5rem;
+  color: #1eff00;
+  margin-right: 30px;
+  cursor: pointer;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .cart-widget i:hover {
-  transform: scale(1.2); /* Efecto de agrandamiento cuando se pasa el cursor */
+  transform: scale(1.2);
 }
 
+@media (max-width: 768px) {
+  .cart-widget i {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-widget i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+}
+
+/* Contenedor de la lista de productos */
 .item-list-container {
-  margin-top: 140px; /* Ajusta la separación respecto a la barra de navegación */
+  margin-top: 140px;
   padding: 50px;
   text-align: center;
   background-color: #ffffff;
@@ -195,10 +118,8 @@ body {
   font-size: 2.5rem;
   color: #333;
 }
-.cart-widget i {
-  color: #1eff00; /* Amarillo brillante para destacar el carrito */
-}
 
+/* Botones generales */
 button {
   background-color: #007bff;
   color: white;
@@ -211,27 +132,4 @@ button {
 
 button:hover {
   background-color: #0056b3;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-.nav-link {
-  background: none; /* Elimina el fondo por defecto de los botones */
-  padding: 0; /* Elimina el padding extra */
-  color: white;
-  font-size: 1.1rem;
-  border: none;
-  cursor: pointer;
-}
-
-.nav-link:hover {
-  color: #ffcc00; /* Efecto hover similar al anterior */
-}
-
-.cart-widget {
-  margin-right: 30px;
 }
