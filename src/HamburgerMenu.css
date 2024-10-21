@@ -1,52 +1,70 @@
-/* Estilos generales del menú hamburguesa */
 .hamburger-menu {
-  position: relative;
+  display: none;
 }
 
 .hamburger-icon {
-  font-size: 30px;
+  font-size: 2rem;
   background: none;
   border: none;
-  cursor: pointer;
   color: white;
+  cursor: pointer;
 }
 
 .menu-text {
   margin-left: 10px;
-  font-size: 18px;
-  color: white;
 }
 
-/* Menú desplegable */
 .nav-links {
-  display: none;
-  flex-direction: column;
-  background-color: #333;
-  position: absolute;
-  top: 50px;
-  right: 10px;
-  width: 200px;
-  border-radius: 8px;
-  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav-links.open {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-@media (min-width: 768px) {
-  .hamburger-icon {
-    display: none;
+.nav-link {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+}
+
+.cart-link {
+  padding: 10px;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.cart-link:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
   }
-  
+
   .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-links.open {
     display: flex;
-    position: static;
-    flex-direction: row;
-    background: none;
+  }
+
+  .hamburger-icon {
+    font-size: 1.5rem;
   }
 }
-
-
-
 
