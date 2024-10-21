@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import Button from './Button'; // Importa el componente Button
-import '/src/HamburgerMenu.css'; // Archivo de estilos
+import Button from './Button';
+import CartWidget from './CartWidget';
+import '/src/HamburgerMenu.css';
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,19 +13,24 @@ const HamburgerMenu = () => {
   return (
     <div className="hamburger-menu">
       <button className="hamburger-icon" onClick={toggleMenu}>
-        &#9776; <span className="menu-text">Menú</span> {/* Agregamos el texto "Menú" */}
+        &#9776; <span className="menu-text">Menú</span>
       </button>
-      <nav className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <Button text="Inicio" className="nav-link" onClick={() => window.location.href = "#home"} />
-        <Button text="Productos" className="nav-link" onClick={() => window.location.href = "#products"} />
-        <Button text="Contacto" className="nav-link" onClick={() => window.location.href = "#contact"} />
-        <Button className="cart-link" text={<i className="fas fa-shopping-cart"></i>} onClick={() => window.location.href = "#cart"} />
-      </nav>
+      {isOpen && (
+        <nav className="nav-links">
+          <Button text="Inicio" className="nav-link" onClick={() => window.location.href = "#home"} />
+          <Button text="Productos" className="nav-link" onClick={() => window.location.href = "#products"} />
+          <Button text="Contacto" className="nav-link" onClick={() => window.location.href = "#contact"} />
+          <CartWidget />
+        </nav>
+      )}
     </div>
   );
 };
 
 export default HamburgerMenu;
+
+
+
 
 
 

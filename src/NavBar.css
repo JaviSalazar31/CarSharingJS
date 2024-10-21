@@ -1,3 +1,21 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
 .nav-link {
   background-color: #007bff;
   color: white;
@@ -6,13 +24,11 @@
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .nav-link:hover {
   background-color: #ffcc00;
-  color: #333;
-  transform: scale(1.1); /* Efecto de agrandado */
+  color: #333; /* Letras en amarillo cuando se hace hover */
 }
 
 .cart-link {
@@ -21,17 +37,9 @@
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .cart-link:hover {
   background-color: #ffcc00;
-  color: #333;
-  transform: scale(1.1); /* Efecto de agrandado */
+  color: #333; /* Letras en amarillo cuando se hace hover */
 }
-
-
-
-
-
-  

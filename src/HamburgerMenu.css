@@ -1,4 +1,4 @@
-/* Ajustes generales del menú hamburguesa */
+/* Estilos generales del menú hamburguesa */
 .hamburger-menu {
   position: relative;
 }
@@ -8,15 +8,13 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #fff;
-  display: flex;
-  align-items: center;
+  color: white;
 }
 
 .menu-text {
-  margin-left: 10px; /* Añade espacio entre el ícono y el texto */
+  margin-left: 10px;
   font-size: 18px;
-  color: #fff; /* Asegúrate de que el color del texto sea consistente con el diseño */
+  color: white;
 }
 
 /* Menú desplegable */
@@ -26,83 +24,29 @@
   background-color: #333;
   position: absolute;
   top: 50px;
-  right: 10px; /* Posición ajustada */
+  right: 10px;
   width: 200px;
   border-radius: 8px;
   padding: 10px;
-  z-index: 1000;
 }
 
 .nav-links.open {
   display: flex;
 }
 
-/* Ajuste para pantallas grandes */
 @media (min-width: 768px) {
   .hamburger-icon {
     display: none;
   }
-
+  
   .nav-links {
     display: flex;
     position: static;
     flex-direction: row;
     background: none;
-    width: auto;
-    padding: 0;
-    margin-right: 20px;
-  }
-
-  .custom-button {
-    margin: 0 10px;
   }
 }
 
-
-/* Estilos de los botones de navegación */
-.nav-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px 0;
-  font-size: 1.1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s, transform 0.3s ease-in-out;
-}
-
-.nav-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.1);
-}
-
-/* Estilos del ícono del carrito */
-.cart-link i {
-  font-size: 24px;
-  color: #ffcc00;
-}
-
-/* Ajustes para pantallas grandes */
-@media (min-width: 768px) {
-  .hamburger-icon {
-    display: none;
-  }
-
-  .nav-links {
-    display: flex;
-    position: static;
-    flex-direction: row;
-    background: none;
-    width: auto;
-    padding: 0;
-    margin-right: 20px;
-  }
-
-  .custom-button {
-    margin: 0 10px;
-  }
-}
 
 
 

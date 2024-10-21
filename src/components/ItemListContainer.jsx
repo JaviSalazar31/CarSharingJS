@@ -1,4 +1,3 @@
-// src/components/ItemListContainer.jsx
 function ItemListContainer({ greeting }) {
   return (
     <div className="item-list-container">
@@ -8,3 +7,4 @@ function ItemListContainer({ greeting }) {
 }
 
 export default ItemListContainer;
+
