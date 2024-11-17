@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
 import { useCart } from '/src/context/CartContext';
 import '/src/NavBar.css';
-
+import '/assets/LogoTiendaJS.png';
 
 function NavBar() {
   const { getTotalItems } = useCart();
