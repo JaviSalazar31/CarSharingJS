@@ -1,5 +1,5 @@
 {
-  "name": "carsharingjs",
+  "name": "tienda-js",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,9 +14,10 @@
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "firebase": "^11.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

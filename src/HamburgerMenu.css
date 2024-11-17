@@ -14,18 +14,18 @@
   margin-left: 10px;
 }
 
-.nav-links {
+.hamburger-menu .nav-links {
   display: flex;
   justify-content: flex-end;
 }
 
-.nav-links.open {
+.hamburger-menu .nav-links.open {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.nav-link {
+.hamburger-menu .nav-link {
   padding: 10px;
   color: white;
   text-decoration: none;
@@ -33,7 +33,7 @@
   transition: transform 0.3s ease;
 }
 
-.nav-link:hover {
+.hamburger-menu .nav-link:hover {
   transform: scale(1.1);
 }
 

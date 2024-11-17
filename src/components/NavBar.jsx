@@ -1,19 +1,24 @@
-import React from 'react';
-import Button from './Button'; // Importa el componente de botón
-import logo from '../assets/LogoCarSharingJS.png'; // Importa la imagen del logo
-import CartWidget from './CartWidget'; // Importa el componente del carrito de compras
+import { Link } from 'react-router-dom';
+import CartWidget from './CartWidget';
+import { useCart } from '/src/context/CartContext';
+import '/src/NavBar.css';
+import LogoTiendaJS from '/src/assets/LogoTiendaJS.png'
 
 function NavBar() {
+  const { getTotalItems } = useCart();
+
   return (
     <nav className="navbar">
-      <div className="logo">
-        <img src={logo} alt="CarSharingJS Logo" style={{ height: '80px', width: 'auto' }} />
+      <div className="navbar-logo">
+        <img src="src/assets/LogoTiendaJS.png" alt="TiendaJS Logo" />
       </div>
-      <div className="nav-links">
-        <Button text="Inicio" className="nav-link" onClick={() => window.location.href = "#home"} />
-        <Button text="Productos" className="nav-link" onClick={() => window.location.href = "#products"} />
-        <Button text="Contacto" className="nav-link" onClick={() => window.location.href = "#contact"} />
-        <CartWidget className="cart-link" />
+      <div className="navbar-links">
+        <Link to="/" className="navbar-link">Inicio</Link>
+        <Link to="/products" className="navbar-link">Productos</Link>
+        <Link to="/contact" className="navbar-link">Contacto</Link>
+        <Link to="/cart" className="navbar-link">
+          <CartWidget itemCount={getTotalItems()} />
+        </Link>
       </div>
     </nav>
   );
