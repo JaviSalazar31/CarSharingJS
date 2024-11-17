@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '/src/WelcomeScreen.css';
-import '/Tienda.JS/assets/MuestraPhone.png';
 
 function WelcomeScreen({ onComplete }) {
   const navigate = useNavigate();
@@ -18,7 +17,7 @@ function WelcomeScreen({ onComplete }) {
   return (
     <div className="welcome-screen">
       <h1 className="welcome-message">¡Bienvenidos a la store de smartphones con las mejores promociones!</h1>
-      <img src="/Tienda.JS/assets/MuestraPhone.png" alt="MuestraPhone" className="welcome-image" />
+      <img src="/assets/MuestraPhone.png" alt="MuestraPhone" className="welcome-image" />
     </div>
   );
 }

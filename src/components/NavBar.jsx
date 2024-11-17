@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
 import { useCart } from '/src/context/CartContext';
 import '/src/NavBar.css';
-import '/Tienda.JS/assets/LogoTiendaJS.png';
 
 
 function NavBar() {
@@ -11,7 +10,7 @@ function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src="/Tienda.JS/assets/LogoTiendaJS.png" alt="TiendaJS Logo" />
+        <img src="/assets/LogoTiendaJS.png" alt="TiendaJS Logo" />
       </div>
       <div className="navbar-links">
         <Link to="/" className="navbar-link">Inicio</Link>
