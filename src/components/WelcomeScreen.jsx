@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '/src/WelcomeScreen.css';
-import '/assetss/MuestraPhone.png';
 
 function WelcomeScreen({ onComplete }) {
   const navigate = useNavigate();
