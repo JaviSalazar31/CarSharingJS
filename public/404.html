@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="0; url=/" />
+  <meta charset="utf-8" />
+  <script>
+    // Detectar la ruta actual
+    const currentPath = window.location.pathname;
+
+    // Verificar si ya incluye la base "/Tienda.JS"
+    const redirectTo = currentPath.startsWith('/Tienda.JS')
+      ? currentPath // Si ya incluye la base, mantener la ruta
+      : `/Tienda.JS${currentPath}`; // Si no, agregar la base
+
+    // Redirigir a la ruta corregida
+    window.location.replace(redirectTo);
+  </script>
 </head>
 <body>
+  <h1>Redirigiendo...</h1>
 </body>
 </html>
