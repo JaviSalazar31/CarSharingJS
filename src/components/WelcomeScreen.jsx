@@ -17,7 +17,7 @@ function WelcomeScreen({ onComplete }) {
   return (
     <div className="welcome-screen">
       <h1 className="welcome-message">¡Bienvenidos a la store de smartphones con las mejores promociones!</h1>
-      <img src="/Tienda.JS/assetss/MuestraPhone.png" alt="MuestraPhone" className="welcome-image" />
+      <img src="/assetss/MuestraPhone.png" alt="MuestraPhone" className="welcome-image" />
     </div>
   );
 }

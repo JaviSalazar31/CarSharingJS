@@ -9,7 +9,7 @@ function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src="/Tienda.JS/assetss/LogoTiendaJS.png" alt="TiendaJS Logo" />
+      <img src="/assetss/LogoTiendaJS.png" alt="TiendaJS Logo" />
       </div>
       <div className="navbar-links">
         <Link to="/" className="navbar-link">Inicio</Link>
