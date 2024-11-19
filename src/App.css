@@ -14,34 +14,37 @@ body, html {
 .app-content {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 /* Main content area */
 .main-content {
-  flex: 1; 
+  flex: 1;
   padding: 20px;
-  max-width: 1200px; 
+  max-width: 1200px;
   margin: 0 auto;
   text-align: left;
+  padding-top: 100px; /* Ajusta para evitar que el contenido quede detrás de la barra */
 }
 
 .page-container {
-  padding-top: 100px;
+  padding-top: 100px; /* Este padding corresponde a la altura de la barra de navegación */
   padding-left: 30px;
   padding-right: 30px;
+  margin-top: 80px;
 }
 
 /* Responsive styling */
 @media (max-width: 768px) {
   .main-content {
-    padding: 1rem;
+    padding-top: 100px; /* Ajusta dinámicamente para resoluciones pequeñas */
   }
 
   .page-container {
-    padding-top: 80px;
+    padding-top: 120px; /* Ajusta el espacio según la altura de la barra */
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 60px;
   }
 }
 
@@ -198,6 +201,7 @@ form input, form textarea {
     opacity: 0.5;
   }
 }
+
 
 
 
