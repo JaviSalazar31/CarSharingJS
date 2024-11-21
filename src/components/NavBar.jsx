@@ -9,7 +9,7 @@ function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-      <img src="/assetss/LogoTiendaJS.png" alt="TiendaJS Logo" />
+        <img src="/assetss/LogoTiendaJS.png" alt="TiendaJS Logo" />
       </div>
       <div className="navbar-links">
         <Link to="/" className="navbar-link">Inicio</Link>
@@ -19,11 +19,16 @@ function NavBar() {
           <CartWidget itemCount={getTotalItems()} />
         </Link>
       </div>
+      <div className="auth-links">
+        <Link to="/register" className="auth-link">Registrarse</Link>
+        <Link to="/login" className="auth-link">Iniciar Sesión</Link>
+      </div>
     </nav>
   );
 }
 
 export default NavBar;
+
 
 
 

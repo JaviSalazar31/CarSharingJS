@@ -8,7 +8,9 @@ import Cart from './components/Cart';
 import Footer from './components/Footer';
 import WelcomeScreen from './components/WelcomeScreen';
 import Contact from './components/Contact';
-import CheckoutForm from './components/CheckoutForm'; 
+import CheckoutForm from './components/CheckoutForm';
+import Register from './components/Register'; // Importar el componente de registro
+import Login from './components/Login'; // Importar el componente de inicio de sesión
 import './App.css';
 
 function App() {
@@ -80,6 +82,22 @@ function App() {
                       </div>
                     }
                   />
+                  <Route
+                    path="/register"
+                    element={
+                      <div className="page-container">
+                        <Register />
+                      </div>
+                    }
+                  />
+                  <Route
+                    path="/login"
+                    element={
+                      <div className="page-container">
+                        <Login />
+                      </div>
+                    }
+                  />
                   {/* Ruta para manejar páginas no encontradas */}
                   <Route
                     path="*"
@@ -102,6 +120,7 @@ function App() {
 }
 
 export default App;
+
 
 
 

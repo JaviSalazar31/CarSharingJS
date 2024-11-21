@@ -1,4 +1,7 @@
-/* General styles */
+:root {
+  --navbar-height: 100px; /* Altura ajustada para incluir botones adicionales */
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -15,6 +18,8 @@ body, html {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: var(--navbar-height); /* Reserva espacio dinámico para la barra de navegación */
+  box-sizing: border-box;
 }
 
 /* Main content area */
@@ -24,27 +29,21 @@ body, html {
   max-width: 1200px;
   margin: 0 auto;
   text-align: left;
-  padding-top: 100px; /* Ajusta para evitar que el contenido quede detrás de la barra */
 }
 
 .page-container {
-  padding-top: 100px; /* Este padding corresponde a la altura de la barra de navegación */
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-top: 80px;
+  padding: 20px 30px; /* Espaciado adicional para el contenido */
+  margin-top: 0;
 }
 
 /* Responsive styling */
 @media (max-width: 768px) {
-  .main-content {
-    padding-top: 100px; /* Ajusta dinámicamente para resoluciones pequeñas */
+  :root {
+    --navbar-height: 120px; /* Aumenta la altura en dispositivos móviles */
   }
 
   .page-container {
-    padding-top: 120px; /* Ajusta el espacio según la altura de la barra */
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-top: 60px;
+    padding: 15px; /* Ajusta el padding para pantallas pequeñas */
   }
 }
 
@@ -65,6 +64,7 @@ body, html {
   padding: 1rem 0;
   width: 100%;
 }
+
 
 /* General button styles */
 button {
@@ -201,6 +201,7 @@ form input, form textarea {
     opacity: 0.5;
   }
 }
+
 
 
 

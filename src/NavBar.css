@@ -4,16 +4,16 @@
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between; /* Mantén el logo y los enlaces separados */
-  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between;
+  align-items: center;
   background-color: #333;
   padding: 0 1rem;
-  height: 80px;
+  height: var(--navbar-height); /* Ajusta la altura dinámicamente */
   z-index: 1000;
 }
 
 .navbar-logo {
-  height: 70px;
+  height: calc(var(--navbar-height) - 20px);
   margin-left: 1rem;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@
 
 .navbar-logo img {
   height: auto;
-  max-height: 70px;
+  max-height: 100%;
   max-width: 100px;
   object-fit: contain;
 }
@@ -49,10 +49,46 @@
   background-color: #ff6347;
 }
 
+.auth-links {
+  display: flex;
+  gap: 1rem;
+  margin-right: 2rem;
+}
+
+.auth-link {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.auth-link:hover {
+  background-color: #0056b3;
+}
+
 .cart-widget {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+/* Styles for error messages */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.error-message::before {
+  content: "⚠️ ";
+  font-size: 1rem;
+  margin-right: 0.3rem;
 }
 
 /* Responsive styles */
@@ -76,14 +112,25 @@
     margin: 0;
   }
 
-  .navbar-link {
+  .auth-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .navbar-link, .auth-link {
     width: 90%;
   }
 
-  .cart-widget {
-    margin-top: 0.5rem;
+  .error-message {
+    font-size: 0.8rem;
+    text-align: center;
   }
 }
+
+
+
+
 
 
 
